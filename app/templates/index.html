@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Cajazeiras | Dados Covid.</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="styles/style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
 
 </head>
 <body id="page">
-
+        
     <div id="header">
+        <div>
+            <a class="logo" href="https://cajazeiras.pb.gov.br/" rel="nofollow" target="_blank" class="line"></a>
+        </div>
+
         <h2 class="cab">MONITORANDO O CORONAVÍRUS (COVID-19)</h2>
-        <h3 class="cab">Município de Cajazeiras - PB</h3>
         <h4 class="cab">Sistema atualizado em: dd/mm/aaaa às hh:mm</h4>
-    </div>    
+    </div>  
+
     <div id="nav">
         <ul>
             <li><a href="{{url_for('main.homepage')}}" class="disable_underlined">BOLETIM</a></li>
