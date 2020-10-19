@@ -24,25 +24,22 @@
             <li><a href="{{url_for('main.homepage')}}" class="disable_underlined">BOLETIM</a></li>
             <li><a href="{{url_for('cons.conspage')}}" class="disable_underlined">EXAME</a></li>
             <li><a href="{{url_for('info.infopage')}}" class="disable_underlined">REDES SOCIAIS</a></li>
-            <br>
-            <li><a href="{{url_for('forms.formspage')}}" class="disable_underlined">TABELA</a></li></li>
-            <li><a href="{{url_for('admin.adminpage')}}" class="disable_underlined">ADMIN</a></li></li>
         </ul>
     </div>
-        
     <div>
-        <form class="box" action="index.html" method="post">
+        <form class="box" action="{{ url_for('cons.formPost') }}" method="post">
+          {{ form.csrf_token }}  
             <h3>Marcação de exame</h3>
-            <input type="text" name="" placeholder="Nome Completo">
-            <input type="text" name="" placeholder="Gênero">
-            <input type="text" name="" placeholder="Idade">
-            <input type="email" name="" placeholder="E-mail">
-            <input type="tel" name="" placeholder="Telefone">
-            <input type="text" name="" placeholder="Bairro">
-            <input type="text" name="" placeholder="Grupo de Risco">
-            <input type="text" name="" placeholder="Sintomas">
+            {{ form.name(class="form-control",placeholder="Nome completo")}}
+            {{ form.gender(class="form-control",placeholder="Gênero")}}
+            {{ form.age(class="form-control",placeholder="Idade")}}
+            {{ form.email(class="form-control",placeholder="E-mail")}}
+            {{ form.tell(class="form-control",placeholder="Telefone")}}
+            {{ form.district(class="form-control",placeholder="Bairro")}}
+            {{ form.group_risk(class="form-control",placeholder="Grupo de Risco")}}
+            {{ form.symptoms(class="form-control",placeholder="Sintomas")}}
             <br>
-            <b><input type="submit" name="" value="Enviar"></b>
+            <b><input class="button is-primary" type="submit" name="" value="Enviar"></b>
               
         </form>
     </div>

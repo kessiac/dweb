@@ -24,14 +24,16 @@
             <li><a href="{{url_for('main.homepage')}}" class="disable_underlined">BOLETIM</a></li>
             <li><a href="{{url_for('cons.conspage')}}" class="disable_underlined">EXAME</a></li>
             <li><a href="{{url_for('info.infopage')}}" class="disable_underlined">REDES SOCIAIS</a></li>
-            <br>
-            <li><a href="{{url_for('forms.formspage')}}" class="disable_underlined">TABELA</a></li></li>
-            <li><a href="{{url_for('admin.adminpage')}}" class="disable_underlined">ADMIN</a></li></li>
         </ul>
     </div>
+    {% if error %}
+    <div class="notification is-danger">
+      {{ error }}
+    </div>
+    {% endif %}
 
     <div id="result">
-        <h4>Solicitação enviada</h4>
+        <h4>!!!!!</h4>
     </div>
 
     <div id="footer">
