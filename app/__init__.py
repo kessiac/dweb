@@ -26,3 +26,9 @@ app.register_blueprint(blueprint_home)
 
 from app.modulos.info.view import info as blueprint_info
 app.register_blueprint(blueprint_info)
+
+from app.modulos.forms.view import forms as blueprint_forms
+app.register_blueprint(blueprint_forms)
+
+from app.modulos.admin.view import admin as blueprint_admin
+app.register_blueprint(blueprint_admin)
