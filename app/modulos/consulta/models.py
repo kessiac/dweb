@@ -1,15 +1,14 @@
-from flask_wtf import FlaskForm
-from wtforms import StringField, IntegerField
-from wtforms.validators import DataRequired
+import peewee
+from app.modulos.core import models as core
 
-class CategoryForm(FlaskForm):
-  
-  name = StringField('Nome', validators=[DataRequired()])
-  gender = StringField('Gênero', validators=[DataRequired()])
-  age = IntegerField('Idade', validators=[DataRequired()])
-  email = StringField('E-mail', validators=[DataRequired()])
-  tell = StringField('Telefone', validators=[DataRequired()])
-  district = StringField('Bairro', validators=[DataRequired()])
-  group_risk = StringField('Grupo de Risco', validators=[DataRequired()])
-  symptoms = StringField('Sintomas', validators=[DataRequired()])
+class Exames(core.BaseModel):
+
+  name = peewee.CharField(unique=True)
+  gender = peewee.CharField()
+  age = peewee.IntegerField()
+  email = peewee.CharField()
+  tell = peewee.IntegerField()
+  district = peewee.CharField()
+  group_risk = peewee.CharField()
+  symptoms = peewee.TextField()
 
