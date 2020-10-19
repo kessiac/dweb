@@ -4,6 +4,7 @@ from wtforms.validators import DataRequired
 
 class CategoryForm(FlaskForm):
   
+  cpf = StringField('CPF', validators=[DataRequired()])
   name = StringField('Nome', validators=[DataRequired()])
   gender = StringField('Gênero', validators=[DataRequired()])
   age = IntegerField('Idade', validators=[DataRequired()])

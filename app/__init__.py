@@ -32,3 +32,6 @@ app.register_blueprint(blueprint_forms)
 
 from app.modulos.admin.view import admin as blueprint_admin
 app.register_blueprint(blueprint_admin)
+
+from app.modulos.consulta.models import Exames
+db.create_tables([Exames])

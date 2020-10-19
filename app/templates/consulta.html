@@ -27,9 +27,11 @@
         </ul>
     </div>
     <div>
+        
         <form class="box" action="{{ url_for('cons.formPost') }}" method="post">
           {{ form.csrf_token }}  
             <h3>Marcação de exame</h3>
+            {{ form.cpf(class="form-control",placeholder="CPF")}}
             {{ form.name(class="form-control",placeholder="Nome completo")}}
             {{ form.gender(class="form-control",placeholder="Gênero")}}
             {{ form.age(class="form-control",placeholder="Idade")}}

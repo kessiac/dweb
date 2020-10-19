@@ -3,12 +3,13 @@ from app.modulos.core import models as core
 
 class Exames(core.BaseModel):
 
-  name = peewee.CharField(unique=True)
+  cpf = peewee.CharField(unique=True)
+  name = peewee.CharField()
   gender = peewee.CharField()
   age = peewee.IntegerField()
   email = peewee.CharField()
-  tell = peewee.IntegerField()
+  tell = peewee.CharField()
   district = peewee.CharField()
   group_risk = peewee.CharField()
   symptoms = peewee.TextField()
-
+  status = peewee.IntegerField(default=0)

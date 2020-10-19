@@ -30,3 +30,9 @@
         </ul>
     </div>
     
+    {% for exame in exames %}
+    <p>
+        {{ exame.name }}
+        <a href="{{ url_for('cons.update', exame_id=exame.id, status=1) }}">Infectado</a>
+    </p>
+    {% endfor %}
