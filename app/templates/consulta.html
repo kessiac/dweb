@@ -42,7 +42,26 @@
             {{ form.group_risk(class="form-control",placeholder="Grupo de Risco")}}
             {{ form.symptoms(class="form-control",placeholder="Sintomas")}}
             <br>
-            <b><input style="background-color: #191919; color: #fcfcfc;" class="button is-primary" type="submit" name="" value="ENVIAR"></b>
+            <style>
+                .box input[type=submit]{
+                        border:0;
+                        background: #191919;
+                        display: inline-block;
+                        margin-top: 20px;
+                        text-align: center;
+                        border: 2px solid #AD111E;
+                        padding: 14px 10px;
+                        width: 125px;
+                        outline: none;
+                        color: #C4C4C4;;
+                        border-radius: 10px;
+                        transition: 0.25s;
+                    }
+                    .box input[type=submit]:hover{
+                        border-color: #fcfcfc;
+                    }
+            </style>
+            <input type="submit" name="" value="ENVIAR"></b>
         </form>
     </div>
         

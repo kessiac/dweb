@@ -138,7 +138,7 @@ ul li a {
   transition: 0.25s;
   cursor: pointer;
 }
-.box input[type="submit"]:hover{
+.box input[type="submit"]:hover, b:hover{
   border: 2 solid #FCFCFC;
 }
 
