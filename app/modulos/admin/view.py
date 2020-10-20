@@ -11,5 +11,5 @@ def adminpage():
     if form.user.data == 'admin' and form.senha.data == 'admin':
       return redirect(url_for('cons.consultaspage'))
     else:
-      return render_template('admin.html', form=form, error = "Ususário ou senha incorretos")
+      return render_template('admin.html', form=form, error = "Usuário ou senha incorretos")
   return render_template('admin.html', form=form)

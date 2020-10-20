@@ -16,7 +16,7 @@
             <img class="logo" src="https://cajazeiras.pb.gov.br/imagens/logo.png">
         </div>
 
-        <h2 class="cab">MONITORANDO O CORONAVÍRUS (COVID-19)</h2>
+        <h2 class="cab">BOLETIM DO CORONAVÍRUS (COVID-19)</h2>
     </div>  
 
     <div id="nav">
@@ -24,19 +24,20 @@
             <li><a href="{{url_for('main.homepage')}}" class="disable_underlined">BOLETIM</a></li>
             <li><a href="{{url_for('cons.conspage')}}" class="disable_underlined">EXAME</a></li>
             <li><a href="{{url_for('info.infopage')}}" class="disable_underlined">REDES SOCIAIS</a></li>
-            <br>
             <li><a href="{{url_for('admin.adminpage')}}" class="disable_underlined">ADMIN</a></li></li>
         </ul>
     </div>
-    
-    {% for exame in exames %}
-    <p>
-        {{ exame.name }}
-        <a href="{{ url_for('cons.update', exame_id=exame.id, status=0) }}">Em Análise</a>
-        <a href="{{ url_for('cons.update', exame_id=exame.id, status=1) }}">Confirmado</a>
-        <a href="{{ url_for('cons.update', exame_id=exame.id, status=2) }}">Descartado</a>
-        <a href="{{ url_for('cons.update', exame_id=exame.id, status=3) }}">Óbito</a>
-        <a href="{{ url_for('cons.update', exame_id=exame.id, status=4) }}">Internado</a>
-        <a href="{{ url_for('cons.update', exame_id=exame.id, status=5) }}">Recuperado</a>
-    </p>
-    {% endfor %}
+    <div id="names" class="box" style="width: 960px">
+        <h3>SOLICITAÇÕES</h3>
+        {% for exame in exames %}
+        <div>
+            <h4>{{ exame.name }}</h4>
+            <a class="disable_underlined" href="{{ url_for('cons.update', exame_id=exame.id, status=0) }}">Em Análise</a>
+            <a class="disable_underlined" href="{{ url_for('cons.update', exame_id=exame.id, status=1) }}">Confirmado</a>
+            <a class="disable_underlined" href="{{ url_for('cons.update', exame_id=exame.id, status=2) }}">Descartado</a>
+            <a class="disable_underlined" href="{{ url_for('cons.update', exame_id=exame.id, status=3) }}">Óbito</a>
+            <a class="disable_underlined" href="{{ url_for('cons.update', exame_id=exame.id, status=4) }}">Internado</a>
+            <a class="disable_underlined" href="{{ url_for('cons.update', exame_id=exame.id, status=5) }}">Recuperado</a>
+        </div>
+        {% endfor %}
+    </div>
