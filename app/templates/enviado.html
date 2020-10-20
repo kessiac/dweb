@@ -19,7 +19,7 @@
         <h2 class="cab">BOLETIM DO CORONAVÍRUS (COVID-19)</h2>
     </div> 
 
-    <div id="nav">
+    <div id="nav" style="margin-bottom: -15px;">
         <ul>
             <li><a href="{{url_for('main.homepage')}}" class="disable_underlined">BOLETIM</a></li>
             <li><a href="{{url_for('cons.conspage')}}" class="disable_underlined">EXAME</a></li>
@@ -33,11 +33,11 @@
     </div>
     {% endif %}
 
-    <div id="result">
-        <h4>Cadastro Enviado!</h4>
+    <div id="result" class="box" style="height: 250px">
+        <h4 style="border: 2px solid #AD111E; margin-top: 25%;">Cadastro Enviado!</h4>
     </div>
 
     <div id="footer">
-        <p class="cop">&copy; 2020</p>
+        <p class="cop" style="color: #191919;">&copy; 2020</p>
     </div>
 </body>
