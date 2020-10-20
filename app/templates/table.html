@@ -25,7 +25,6 @@
             <li><a href="{{url_for('cons.conspage')}}" class="disable_underlined">EXAME</a></li>
             <li><a href="{{url_for('info.infopage')}}" class="disable_underlined">REDES SOCIAIS</a></li>
             <br>
-            <li><a href="{{url_for('forms.formspage')}}" class="disable_underlined">TABELA</a></li></li>
             <li><a href="{{url_for('admin.adminpage')}}" class="disable_underlined">ADMIN</a></li></li>
         </ul>
     </div>
@@ -33,6 +32,11 @@
     {% for exame in exames %}
     <p>
         {{ exame.name }}
-        <a href="{{ url_for('cons.update', exame_id=exame.id, status=1) }}">Infectado</a>
+        <a href="{{ url_for('cons.update', exame_id=exame.id, status=0) }}">Em Análise</a>
+        <a href="{{ url_for('cons.update', exame_id=exame.id, status=1) }}">Confirmado</a>
+        <a href="{{ url_for('cons.update', exame_id=exame.id, status=2) }}">Descartado</a>
+        <a href="{{ url_for('cons.update', exame_id=exame.id, status=3) }}">Óbito</a>
+        <a href="{{ url_for('cons.update', exame_id=exame.id, status=4) }}">Internado</a>
+        <a href="{{ url_for('cons.update', exame_id=exame.id, status=5) }}">Recuperado</a>
     </p>
     {% endfor %}

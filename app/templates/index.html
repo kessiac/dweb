@@ -27,7 +27,6 @@
             <li><a href="{{url_for('cons.conspage')}}" class="disable_underlined">EXAME</a></li>
             <li><a href="{{url_for('info.infopage')}}" class="disable_underlined">REDES SOCIAIS</a></li>
             <br>
-            <li><a href="{{url_for('cons.consultaspage')}}" class="disable_underlined">TABELA</a></li></li>
             <li><a href="{{url_for('admin.adminpage')}}" class="disable_underlined">ADMIN</a></li></li>
         </ul>
     </div>
@@ -42,23 +41,23 @@
         </div>
         <div id="article" class="article2">
             <p>EM ANÁLISE</p>
-            <p>44</p>
+            <p>{{boletim.0.count}}</p>
         </div>
         <div id="article" class="article3">
             <p>DESCARTADOS</p>
-            <p>98</p>
+            <p>{{boletim.2.count}}</p>
         </div>
         <div id="article" class="article4">
             <p>ÓBITOS</p>
-            <p>43</p>
+            <p>{{boletim.3.count}}</p>
         </div>
         <div id="article" class="article5">
             <p>INTERNADOS</p>
-            <p>02</p>
+            <p>{{boletim.4.count}}</p>
         </div>
         <div id="article" class="article6">
             <p>RECUPERADOS</p>
-            <p>1618</p>
+            <p>{{boletim.5.count}}</p>
         </div>
     </div>
 

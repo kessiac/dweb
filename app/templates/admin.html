@@ -25,17 +25,23 @@
             <li><a href="{{url_for('cons.conspage')}}" class="disable_underlined">EXAME</a></li>
             <li><a href="{{url_for('info.infopage')}}" class="disable_underlined">REDES SOCIAIS</a></li>
             <br>
-            <li><a href="{{url_for('forms.formspage')}}" class="disable_underlined">TABELA</a></li></li>
             <li><a href="{{url_for('admin.adminpage')}}" class="disable_underlined">ADMIN</a></li></li>
         </ul>
     </div>
     
     <div>
-        <form id='adm' class= "box" action="index.html" method="post">
+        <form id='adm' class= "box" action="" method="post">
+            {{ form.csrf_token }}  
             <h3 style='color: #191919;'>ADMIN<h3>
-            <input style="background-color: #191919; margin-top: 20px;" type="text" name="" placeholder="user">
-            <input style="background-color: #191919;" type="text" name="" placeholder="password">
+            {{ form.user(class="form-control",placeholder="User", style="background-color: #191919")}}
+            {{ form.senha(class="form-control",placeholder="Senha", style="background-color: #191919")}}            
             <br>
-            <b><input style="background-color: #191919; color: #fcfcfc;" type="submit" name="" value="Enviar"></b>
+            <b><input style="background-color: #191919; color: #fcfcfc;"
+            class="button is-primary"  type="submit" name="" value="Enviar"></b>
         </form>
     </div>
+    {% if error %}
+    <div class="notification is-danger">
+      {{ error }}
+    </div>
+    {% endif %}
